@@ -1,5 +1,3 @@
-# news-backend-files
-
 The server is hosted at https://news-backend-r31m.onrender.com
 
 Also the web interface of the entire application will be available via the link: https://ihorkozloff.github.io/news-front/#/news.
@@ -7,24 +5,24 @@ Also the web interface of the entire application will be available via the link:
 The application web interface files themselves can be downloaded or viewed here: https://github.com/IhorKozloff/news-front 
 
 
-The server accepts requests along the following routes:
+## The server accepts requests along the following routes:
 
-  Auth routes
-  1. POST: /api/user/register 
+  ### Auth routes
+  #### 1. POST: /api/user/register 
       The body object must contain the following fields: name, email, password.
      For exsmple
 
      {name: 'John', email: 'john@gmail.com', password: '123456'}
      
     Will be received object with registered users data.
-  2. POST: /api/user/login
+  #### 2. POST: /api/user/login
      The body object must contain the following fields: email, password.
      For exsmple
 
      { email: 'john@gmail.com', password: '123456'}
      
      Will be received object with registered users data includes token.
-  3. GET: /api/user/logout/:id
+  #### 3. GET: /api/user/logout/:id
        - Request must have auth header with token.
        - :id - users id.
     Fore example:
@@ -36,19 +34,19 @@ The server accepts requests along the following routes:
     });
     
     Will be received empty object - no content.
-  News routes
-  1.GET: /api/news
+  ### News routes
+  #### 1.GET: /api/news
     Will be received object with news data.
 
-  Comments routes
-  1.GET: /api/comments/:id
+  ### Comments routes
+  #### 1.GET: /api/comments/:id
       - id it is news id
     Fore example:
     
     axios.get(/api/comments/83v678379t7895t705370);
     
     Will be received object with all comments about current news.
-  2.POST: /api/comments/ 
+  #### 2.POST: /api/comments/ 
     The body object must contain the following fields { text, news_id, img_urls }; img_urls - must be array contains strings, optional property.
     Also need authorization header with token
     For example:
@@ -67,8 +65,8 @@ The server accepts requests along the following routes:
     })
     
     Will be received object with added comment data.
-    Replyes routes
-    1.GET: /api/reply/:newsId?parent_id=parentId
+    ### Replyes routes
+    #### 1.GET: /api/reply/:newsId?parent_id=parentId
       Where :newsId - is id current news, and one query params - parentId - is comments id, whos reply is.
       For example:
 
