@@ -47,13 +47,16 @@ The server accepts requests along the following routes:
   1.GET: /api/comments/:id
       - id it is news id
     Fore example:
+    
     axios.get(/api/comments/83v678379t7895t705370);
+    
     Will be received object with all comments about current news.
 
   2.POST: /api/comments/ 
     The body object must contain the following fields { text, news_id, img_urls }; img_urls - must be array contains strings, optional property.
     Also need authorization header with token
     For example:
+    
     axios.post(/api/comments, {
       body: {
         text: 'Hellow',
