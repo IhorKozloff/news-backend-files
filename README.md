@@ -23,17 +23,20 @@ The server accepts requests along the following routes:
      For exsmple
 
      { email: 'john@gmail.com', password: '123456'}
+     
      Will be received object with registered users data includes token.
      
   5. GET: /api/user/logout/:id
        - Request must have auth header with token.
-       - :id - users id. For example
+       - :id - users id.
     Fore example:
+
     axios.get(/api/user/logout/83v678379t7895t705370, {
         headers: {
                     'Authorization': `Bearer ${eyen83n83703dm735778783578387570350357035067570563705673w5793y9yw58ly58l.yyw38yc3897cy789cy7c3y7w3y7c5y37cy7y78}`
         }
     });
+    
     Will be received empty object - no content.
 
   News routes
