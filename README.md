@@ -19,7 +19,10 @@ The server accepts requests along the following routes:
     Will be received object with registered users data.
      
   3. POST: /api/user/login
-     The body object must contain the following fields: email, password. For exsmple { email: 'john@gmail.com', password: '123456'}
+     The body object must contain the following fields: email, password.
+     For exsmple
+
+     { email: 'john@gmail.com', password: '123456'}
      Will be received object with registered users data includes token.
      
   5. GET: /api/user/logout/:id
