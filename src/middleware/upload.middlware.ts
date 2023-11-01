@@ -1,11 +1,12 @@
 import httpStatus from 'http-status';
 import multer from 'multer';
 import { AppError } from '../types/AppError';
+const path = require('path')
 
 const storage = multer.diskStorage({
     destination ( req, file, cb ) {
         console.log(file)
-        cb(null, '../public/users-images/');
+        cb(null, path.join(__dirname, 'images'));
     },
     filename (req, file, cb) {
         cb(null, `${Date.now()}-${file.originalname}`);
