@@ -2,13 +2,22 @@ import httpStatus from 'http-status';
 import multer from 'multer';
 import { AppError } from '../types/AppError';
 const path = require('path')
+const fs = require('fs');
+
 
 const storage = multer.diskStorage({
     destination ( req, file, cb ) {
+
+        const uploadDirectory = path.join(__dirname, 'users-images');
+
+        if (!fs.existsSync(uploadDirectory)) {
+            fs.mkdirSync(uploadDirectory);
+        }
+
         console.log(file)
-        const uploadFolderPath = path.join(__dirname, '..', '..', '..', '..', 'public/users-images')
-        console.log(uploadFolderPath)
-        cb(null, uploadFolderPath);
+
+        console.log(uploadDirectory)
+        cb(null, uploadDirectory);
     },
     filename (req, file, cb) {
         cb(null, `${Date.now()}-${file.originalname}`);
