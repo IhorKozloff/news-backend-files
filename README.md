@@ -11,7 +11,10 @@ The server accepts requests along the following routes:
 
   Auth routes
   1. POST: /api/user/register 
-      The body object must contain the following fields: name, email, password. For exsmple {name: 'John', email: 'john@gmail.com', password: '123456'}
+      The body object must contain the following fields: name, email, password.
+     For exsmple
+
+     {name: 'John', email: 'john@gmail.com', password: '123456'}
      
     Will be received object with registered users data.
      
