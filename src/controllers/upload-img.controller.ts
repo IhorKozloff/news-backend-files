@@ -5,7 +5,7 @@ export class UploadImgController {
     static async save (req: Request, res: Response) {
         console.log('controller works')
         const file = req.file;
-        
+        console.log(file)
         res.status(httpStatus.OK).json({
             img_url: `${file?.path.split('src\\public\\')[1]}`
         })
