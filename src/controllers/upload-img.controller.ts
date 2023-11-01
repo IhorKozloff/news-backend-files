@@ -7,7 +7,7 @@ export class UploadImgController {
         const file = req.file;
         console.log(file)
         res.status(httpStatus.OK).json({
-            img_url: `${file?.path.split('src\\public\\')[1]}`
+            img_url: `${file?.path.split('src/public/')[1]}`
         })
     }
 }
