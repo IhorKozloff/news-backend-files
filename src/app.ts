@@ -27,6 +27,7 @@ app.use((err: Error | AppError, req: Request, res: Response, next: NextFunction)
         const { code = 500, message = 'General Server Error' } = err;
         res.status(code).json({ message });
     } else {
+        console.log(err)
         const { message } = err;
         res.status(500).json({ message });
     } 
