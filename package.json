@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest -i",
     "dev": "nodemon ./src/build/index.js",
-    "build": "npm install & npx tsc",
-    "start": "npm run test & node ./src/build/index.js"
+    "build": "npm install && npx tsc",
+    "start": "npm run test && node ./src/build/index.js"
   },
   "keywords": [],
   "author": "",
