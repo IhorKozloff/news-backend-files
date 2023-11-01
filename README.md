@@ -2,6 +2,7 @@
 In order to start a project, you need to follow 2 simple steps:
   1. Download files.
   2. In the directory with the project files, use the terminal to execute the commands sequentially:
+     
     2.1 npm i
     2.2 npm start
 
