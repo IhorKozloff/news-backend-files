@@ -17,14 +17,14 @@ The server accepts requests along the following routes:
      {name: 'John', email: 'john@gmail.com', password: '123456'}
      
     Will be received object with registered users data.
-  3. POST: /api/user/login
+  2. POST: /api/user/login
      The body object must contain the following fields: email, password.
      For exsmple
 
      { email: 'john@gmail.com', password: '123456'}
      
      Will be received object with registered users data includes token.
-  5. GET: /api/user/logout/:id
+  3. GET: /api/user/logout/:id
        - Request must have auth header with token.
        - :id - users id.
     Fore example:
@@ -65,6 +65,7 @@ The server accepts requests along the following routes:
           'Authorization': `Bearer ${eyen83n83703dm735778783578387570350357035067570563705673w5793y9yw58ly58l.yyw38yc3897cy789cy7c3y7w3y7c5y37cy7y78}`
         }
     });
+
     
     Will be received object with added comment data.
     Replyes routes
