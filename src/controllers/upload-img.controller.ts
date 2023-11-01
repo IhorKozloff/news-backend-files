@@ -3,6 +3,7 @@ import httpStatus from 'http-status';
 
 export class UploadImgController {
     static async save (req: Request, res: Response) {
+        console.log('controller works')
         const file = req.file;
         
         res.status(httpStatus.OK).json({
